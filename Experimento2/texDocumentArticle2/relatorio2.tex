@@ -6,7 +6,8 @@
 %
 
 \documentclass[journal]{IEEEtran}
-
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
 \usepackage{hyperref}
 
 \begin{document}
@@ -19,48 +20,71 @@
 \maketitle
 
 \begin{abstract}
-Este relatório não tem um ataque principal em questão, aqui é onde comecamos a falar sobre ataques simples em geral, ataques conhecidos, como, por exemplo, \textit{Gathering, DDoS, Flood,} entre outros.
+Este relatório não tem um ataque principal em questão, aqui é onde comecamos a falar sobre ataques simples em geral, ataques conhecidos, como, por exemplo, \textit{Gathering, DoS, Flood,} entre outros.
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
 \begin{IEEEkeywords}
-Ataques, redes, LAN, ARP, DDoS, Gathering, Flood, HTTP, IP, NMap, Python3.
+Ataques, redes, LAN, ARP, DDoS, Gathering, Flood, BruteForce, HTTP, IP, NMap, Python3.
 \end{IEEEkeywords}
 
 
 
 
 \section{Introduction}
-% The very first letter is a 2 line initial drop letter followed
-% by the rest of the first word in caps.
-% 
-% form to use if the first word consists of a single letter:
-% \IEEEPARstart{A}{demo} file is ....
-% 
-% form to use if you need the single drop letter followed by
-% normal text (unknown if ever used by IEEE):
-% \IEEEPARstart{A}{}demo file is ....
-% 
-% Some journals put the first two words in caps:
-% \IEEEPARstart{T}{his demo} file is ....
-% 
-% Here we have the typical use of a "T" for an initial drop letter
-% and "HIS" in caps to complete the first word.
-\IEEEPARstart{O}{s} ataques mencionados a cima são somente o primeiro passo para ataques maiores. Por esse motivo, ataques simples podem acabar se tornando extremamente perigosos. \\
-Uma das principais solucões para ataques externos é a implementacao de uma IDS (Invasion Detection System), uma aplicacão, normalmente local, que monitora a rede ou os sistemas à procura de invasores ou softwares maliciosos.
-% You must have at least 2 lines in the paragraph with the drop letter
-% (should never be an issue)
+
+\IEEEPARstart{O}{s} ataques mencionados a cima são somente o primeiro passo para ataques maiores. Por esse motivo, ataques simples podem acabar se tornando extremamente perigosos. \par
+Uma das principais solucões para ataques externos é a implementação de uma IDS (Invasion Detection System), uma aplicação, normalmente local, que monitora a rede ou os sistemas à procura de invasores ou softwares maliciosos. \par
+Abaixo são apresentados alguns dos principais ataques que já foram muito bem sucedidos no passado e continuam sendo efetivos em sistemas mais vulneráveis.
 
 
-\subsection{Subsection Heading Here}
-Subsection text here.
 
-% needed in second column of first page if using \IEEEpubid
-%\IEEEpubidadjcol
+\subsection{NMap}
+Tema já abordado no relatório NMap[1], porém de extrema importância para o processo de \textit{'information Gathering'}. Também conhecido como Port Scanner, o NMap pode almejar de sistemas a redes inteiras e é já é utilizado por diversos frameworks conhecidos.
 
-\subsubsection{Subsubsection Heading Here}
-Subsubsection text here.
+\subsection{Flood}
+A proposta do \textit{Flood}, como o nome já indica, é encher/"entupir" algo ou alguém com algo. Imaginemos uma analogia básica para fins didáticos, um atendente de bar, por exemplo, está trabalhando em uma noite especial e 100 pessoas tentam fazer pedidos simultaneamente para ele, sem dúvida alguma, ele não conseguirá lidar com toda essa demanda e talvez até desista da tarefa. Pois, esse é o princípio do \textit{Flood}, enviar pedidos em larga escala em um curto período de tempo.
 
+\subsection{DoS (Denial of Service)}
+%DoS
+O ataque de negação de serviço utiliza-se do princípio do \textit{Flood}, entupindo os recursos de um serviço com requisições, indisponibilizando aos usuários daquele serviço acesso e comunicação. \par
+No experimento realizado, um simples script em python foi o suficiente para simular um pequeno ataque DoS ao serviço criado pelo colega próximo do laboratório, conectado à mesma LAN. O serviço era uma pequena aplicação HTTP na porta 8000 e o script cria 300 conexões HTTP.\par
+Na imagem abaixo, pode ser visto que o IP da máquina localhost é 172.16.5.93 e foi feito um ataque DoS no endereço IP 172.16.5.91. Pode-se confirmar que o ataque foi bem sucedido, pois a resposta HTTP é um código 200, indicando sucesso. O número na linha logo abaixo do código 200 há um número que se repete, 715, este número representa o número de bytes no diretório no qual a aplicação está diretamente associado. 
+
+%Imagem
+\begin{figure}[h!]
+	\includegraphics[width=\linewidth]{../fotos_experimento_2/atacandoRodrigo.png}
+	\caption{Ataque DoS ao colega em mesma LAN}
+	\label{fig:Ataque_a_terceiro}
+\end{figure}
+
+Na figura seguinte, podemos ver um mesmo ataque acontecendo, porém agora no próprio localhost, ou seja, em um serviço criado na mesma máquina atacante. Nessa imagem, é possível ver as requisições do lado do servidor, onde há informações do endereço IP do cliente, timestamp da requisição e o tipo da requisição, nesse caso o log do serviço é esse, porém pode ser muito diferente dependendo da aplicação. Perceba também, que o intervalo entre uma requisição e outra é tão pequena que todas na tela do terminal apresentam mesmo timestamp.
+
+%Imagem
+\begin{figure}[h!]
+	\includegraphics[width=\linewidth]{../fotos_experimento_2/atacandoLocalhost.png}
+	\caption{Ataque DoS ao próprio endereço local}
+	\label{fig:Ataque_a_si}
+\end{figure}
+
+Ao analisar o tráfego da rede, fica claro como um ataque de negação de serviço acaba sendo muito custoso para conexões TCP, já que para requisição HTTP, até mesmo um simples 'GET', requer um 'three-way-handshake' da conexão segura fornecida pelo TCP. Na figura abaixo podemos ver um pequeno pedaço da análise do tráfego em modo promíscuo no WireShark no exato momento do ataque.
+
+%Imagem
+\begin{figure}[h!]
+	\includegraphics[width=\linewidth]{../fotos_experimento_2/pacotes_DoS_TCP_HTTP.png}
+	\caption{Pacotes ataque DoS}
+	\label{fig:Pacotes_ataque}
+\end{figure}
+
+%DDoS
+O DDoS continua sendo um ataque de negação de serviço da mesma forma, porém mais "inteligente", já que ele distribui a origem do ataque, fazendo com que várias máquinas diferentes façam algumas poucas requisições, totalizando em uma ataque generalizado e bem organizado. A maior vantagem do ataque ser distribuído dessa forma, é que o atacante gera uma dificuldade de localização grande, já que as requisições não são de um único endereço IP. Além disso, um ataque com várias máquinas dispõem de muito mais recursos do que somente uma máquina gerando requisições.
+
+%Imagem
+\begin{figure}[h!]
+	\includegraphics[width=\linewidth]{../fotos_experimento_2/DDos_Attack.png}
+	\caption{Topologia clássica de um DDoS distribuído}
+	\label{fig:ddos}
+\end{figure}
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
@@ -89,55 +113,6 @@ Subsubsection text here.
 % results in a large percentage of a column being occupied by floats.
 
 
-% An example of a double column floating figure using two subfigures.
-% (The subfig.sty package must be loaded for this to work.)
-% The subfigure \label commands are set within each subfloat command,
-% and the \label for the overall figure must come after \caption.
-% \hfil is used as a separator to get equal spacing.
-% Watch out that the combined width of all the subfigures on a 
-% line do not exceed the text width or a line break will occur.
-%
-%\begin{figure*}[!t]
-%\centering
-%\subfloat[Case I]{\includegraphics[width=2.5in]{box}%
-%\label{fig_first_case}}
-%\hfil
-%\subfloat[Case II]{\includegraphics[width=2.5in]{box}%
-%\label{fig_second_case}}
-%\caption{Simulation results.}
-%\label{fig_sim}
-%\end{figure*}
-%
-% Note that often IEEE papers with subfigures do not employ subfigure
-% captions (using the optional argument to \subfloat[]), but instead will
-% reference/describe all of them (a), (b), etc., within the main caption.
-
-
-% An example of a floating table. Note that, for IEEE style tables, the 
-% \caption command should come BEFORE the table. Table text will default to
-% \footnotesize as IEEE normally uses this smaller font for tables.
-% The \label must come after \caption as always.
-%
-%\begin{table}[!t]
-%% increase table row spacing, adjust to taste
-%\renewcommand{\arraystretch}{1.3}
-% if using array.sty, it might be a good idea to tweak the value of
-% \extrarowheight as needed to properly center the text within the cells
-%\caption{An Example of a Table}
-%\label{table_example}
-%\centering
-%% Some packages, such as MDW tools, offer better commands for making tables
-%% than the plain LaTeX2e tabular which is used here.
-%\begin{tabular}{|c||c|}
-%\hline
-%One & Two\\
-%\hline
-%Three & Four\\
-%\hline
-%\end{tabular}
-%\end{table}
-
-
 % Note that IEEE does not put floats in the very first column - or typically
 % anywhere on the first page for that matter. Also, in-text middle ("here")
 % positioning is not used. Most IEEE journals use top floats exclusively.
@@ -148,7 +123,9 @@ Subsubsection text here.
 
 
 \section{Conclusion}
-The conclusion goes here.
+%DoS não distribuídos são extremamente ineficazes, pois hoje a grande maioria das aplicações podem detectar grandes volumes de requisições originadas em um mesmo IP ou poucos mesmos IPs.
+% Ataque custoso para o atacate também
+%ATUALIZACOES DOS SOFTWARES
 
 
 
@@ -183,17 +160,6 @@ Appendix two text goes here.
 \section*{Acknowledgment}
 
 
-The authors would like to thank...
-
-
-% Can use something like this to put references on a page
-% by themselves when using endfloat and the captionsoff option.
-\ifCLASSOPTIONcaptionsoff
-  \newpage
-\fi
-
-
-
 % trigger a \newpage just before the given reference
 % number - used to balance the columns on the last page
 % adjust value as needed - may need to be readjusted if
@@ -219,7 +185,8 @@ The authors would like to thank...
 \begin{thebibliography}{1}
 
 \bibitem{IDS}
-https://en.wikipedia.org/wiki/Intrusion_detection_system\\
+%https://en.wikipedia.org/wiki/Intrusion_detection_system\\
+%https://pt.wikipedia.org/wiki/Ataque_de_nega%C3%A7%C3%A3o_de_servi%C3%A7o
 
 \end{thebibliography}
 
