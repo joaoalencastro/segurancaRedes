@@ -1,0 +1,17 @@
+	Getting started in application security
+
+Application security is simply everything involved in developing, maintaining, and purchasing applications that your organization can trust. However, application security is inextricably tied into almost every aspect of your organizations' information technology, and can be maddeningly difficult to tackle. This "Getting Started" page is intended to provide a roadmap of the various topics in application security and where OWASP materials can help you and your organization master them. As the saying goes, when it comes to application security, there are really two types of organizations - those who don't know their code is insecure, and those that do. 
+
+	Why is application security so hard?
+
+If you haven't read it lately, check out Fred Brooks' great article, "No Silver Bullet". In it, Brooks discusses both "accidental" and "essential" difficulties of producing software. We created the accidental difficulties ourselves, by making our languages, compilers, and environments more difficult than they need to be. But the essential difficulties are fundamental problems that will always be with us. Brooks considers four inherent properties of software that help explain the difficulty of software security - complexity, conformity, changeability, and invisibility.
+
+	About threats, vulnerabilities, and countermeasures
+
+A good way to start learning about application security is by understanding software principles, threats, attack, vulnerabilities, and countermeasures. A good overview of the most critical of these is the OWASP Top Ten awareness document. This is a short paper that describes the most critical vulnerabilities, how to find them, and what to do to protect against them in your application.
+
+Another great way to learn about application security is to study some real vulnerabilities and learn how they work. OWASP has developed WebGoat to provide hands-on examples of application security to learn from. WebGoat is a full J2EE application and training environment that contains real vulnerabilities to experiment with and learn from. OWASP ZAP is a powerful web application penetration testing tool that you can use to test applications. For further reference, you can read all about each of the vulnerabilities on the OWASP website to learn more. 
+
+	What are the root causes of application vulnerabilities?
+
+Once you've learned about risk model, you should think about how those problems come into existence. Every application security problem has a root cause somewhere in the organization. It may be that the project didn't have the right activities in their development process, or it may be that the developers didn't have the right training, or it might even be that the team didn't have the right tools for the job. But every vulnerability is a reason to investigate, find out why it happened, and make some organizational changes. You can find more information about improving your capability in the Software Assurance Maturity Model(OWASP SAMM) Project. 
