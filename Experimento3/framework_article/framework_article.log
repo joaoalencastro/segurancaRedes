@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.18)  26 OCT 2018 10:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.18)  27 OCT 2018 18:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -536,31 +536,66 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Underfull \hbox (badness 3590) in paragraph at lines 40--41
+Underfull \hbox (badness 3590) in paragraph at lines 40--40
 []\OT1/ptm/m/n/10 EALIZAR ex-per-i-men-tos uti-lizando fer-ra-men-tas es-
  []
+
+<../nmap_phases_pic.jpg, id=1, 232.61906pt x 259.7203pt>
+File: ../nmap_phases_pic.jpg Graphic file (type jpg)
+
+<use ../nmap_phases_pic.jpg>
+Package pdftex.def Info: ../nmap_phases_pic.jpg used on input line 49.
+(pdftex.def)             Requested size: 163.79846pt x 182.88882pt.
+
+<../niktoLocalhost.png, id=2, 1032.85875pt x 623.32875pt>
+File: ../niktoLocalhost.png Graphic file (type png)
+
+<use ../niktoLocalhost.png>
+Package pdftex.def Info: ../niktoLocalhost.png used on input line 59.
+(pdftex.def)             Requested size: 252.0pt x 152.07486pt.
+
+<../hydraPostgresLocalhost.png, id=4, 1031.855pt x 210.7875pt>
+File: ../hydraPostgresLocalhost.png Graphic file (type png)
+
+<use ../hydraPostgresLocalhost.png>
+Package pdftex.def Info: ../hydraPostgresLocalhost.png used on input line 70.
+(pdftex.def)             Requested size: 252.0pt x 51.47774pt.
+
+<../simpleCiscoTorchLocalhost.png, id=5, 1029.8475pt x 364.36125pt>
+File: ../simpleCiscoTorchLocalhost.png Graphic file (type png)
+
+<use ../simpleCiscoTorchLocalhost.png>
+Package pdftex.def Info: ../simpleCiscoTorchLocalhost.png used on input line 80
+.
+(pdftex.def)             Requested size: 252.0pt x 89.1553pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
+ <../nmap_phases_pic.jpg> <../niktoLocalhost.png> <../hydraPostgresLocalhost.pn
+g>] [2
 
-] (./framework_article.aux) ) 
+ <../simpleCiscoTorchLocalhost.png>] (./framework_article.aux) ) 
 Here is how much of TeX's memory you used:
- 3803 strings out of 494953
- 56104 string characters out of 6180976
- 115705 words of memory out of 5000000
- 7070 multiletter control sequences out of 15000+600000
- 35094 words of font info for 65 fonts, out of 8000000 for 9000
+ 3836 strings out of 494953
+ 56849 string characters out of 6180976
+ 118743 words of memory out of 5000000
+ 7095 multiletter control sequences out of 15000+600000
+ 36230 words of font info for 66 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 37i,5n,32p,581b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/bas
-e/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on framework_article.pdf (1 page, 39338 bytes).
+ 37i,5n,32p,586b,244s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/tex
+live/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/font
+s/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
+es/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on framework_article.pdf (2 pages, 324130 bytes).
 PDF statistics:
- 21 PDF objects out of 1000 (max. 8388607)
- 14 compressed objects within 1 object stream
+ 36 PDF objects out of 1000 (max. 8388607)
+ 20 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
