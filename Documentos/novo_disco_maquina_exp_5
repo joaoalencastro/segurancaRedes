@@ -1,0 +1,27 @@
+Criar novo disco na m�quina virtual 
+(VM Desligada - Sem estado salvo)
+
+1. Configura��es
+2. Armazenamento
+3. Novo disco em Controladora: SCSI
+4. VDI, Tamanho Fixo (50MB)
+5. Iniciar m�quina
+
+Listar discos
+
+# sudo fdisk -l
+
+Programa de gerenciamento de parti��es (parted)
+
+# sudo parted /dev/<sdx>
+# (parted) mklabel msdos
+# (parted) mkpart primary ext4 1MiB 100%
+# (parted) quit
+
+Formatar parti��o
+# sudo mkfs -t ext4 /dev/<sdx1>
+# mkdir /disk
+# sudo mount /dev/<sdx1> /disk
+
+
+
