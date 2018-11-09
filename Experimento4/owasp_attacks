@@ -1,0 +1,50 @@
+	Esta lista representa as 'Top Ten' ameaças lançadas pelo OWASP e reconhecidas por grandes organizações. O propósito dessa lista não é ajudar ou dar ideias aos atacantes e à pessoas mal-intencionadas, mas sim aos mantenedores de softwares que desejam se proteger de ameaças novas, porém já vastamente exploradas.
+	Neste experimentos utilizaremos a lista abaixo como ponto de partida para explorarmos cada item, descobrindo se há a vulnerabilidade ou não. As principais ferramentas que serão utilizadas serão o WPScan e o OWASP ZAP.
+
+	A1 Injection 
+
+	A2 Broken Authentication and Session Management 
+
+	A3 Cross-Site Scripting (XSS) 
+
+	A4 Insecure Direct Object References 
+
+	A5 Security Misconfiguration 
+
+	A6 Sensitive Data Exposure 
+
+	A7 Missing Function Level Access Control 
+
+	A8 Cross-Site Request Forgery (CSRF) 
+
+	A9 Using Components with Known Vulnerabilities 
+
+	A10 Unvalidated Redirects and Forwards 
+
+
+
+-----------------------------------------------------------------------------------------------
+----------------------------	Montando o Ambiente	---------------------------------------
+-----------------------------------------------------------------------------------------------
+
+ -> Configurando o Juice Shop
+	O que é o Juice Shop?
+		"OWASP Juice Shop is an intentionally insecure webapp for security trainings 			written entirely in Javascript which encompasses the entire OWASP Top Ten and 			other severe security flaws. http://owasp-juice.shop"
+			Referência [https://github.com/bkimminich/juice-shop]
+
+
+	Utilizaremos uma ferramenta de 'conteneirezação' extremamente comum atualmente, o Docker, para configurar nosso ambiente de testes.
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------
+----------------------------	Explorando o Wordpress	---------------------------------------
+-----------------------------------------------------------------------------------------------
+
+
+
+
+
