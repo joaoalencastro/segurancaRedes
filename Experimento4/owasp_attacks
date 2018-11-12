@@ -45,6 +45,15 @@
 -----------------------------------------------------------------------------------------------
 
 
+-----------------------------------------------------------------------------------------------
+----------------------------	Explorando o JuiceShop	---------------------------------------
+-----------------------------------------------------------------------------------------------
+
+Terceiro ataque do top ten discutido a cima - Cross-Site Scripting (XSS)
+
+	O cross-site scripting (XSS) é um tipo de vulnerabilidade na seguranca computacional tipicamente encontrada em aplicacões web. O XSS permite que sejam injetados códigos/rotinas de scripts no lado do cliente nas páginas web. O script pode ser utilizado para 'driblar' controles de acesso, como a política da mesma origem.
 
 
+
+https://en.wikipedia.org/wiki/Cross-site_scripting
 
