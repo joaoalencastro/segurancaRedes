@@ -1,0 +1,466 @@
+--- p0f 3.09b by Michal Zalewski <lcamtuf@coredump.cx> ---
+
+[+] Closed 1 file descriptor.
+[+] Loaded 322 signatures from '/etc/p0f/p0f.fp'.
+[+] Intercepting traffic on default interface 'eth0'.
+[+] Default packet filtering configured [+VLAN].
+[+] Entered main event loop.
+
+.-[ 172.20.10.9/46456 -> 151.101.94.110/443 (syn) ]-
+|
+| client   = 172.20.10.9/46456
+| os       = Linux 3.11 and newer
+| dist     = 0
+| params   = none
+| raw_sig  = 4:64+0:0:1460:mss*20,7:mss,sok,ts,nop,ws:df,id+:0
+|
+`----
+
+.-[ 172.20.10.9/46456 -> 151.101.94.110/443 (mtu) ]-
+|
+| client   = 172.20.10.9/46456
+| link     = Ethernet or modem
+| raw_mtu  = 1500
+|
+`----
+
+.-[ 172.20.10.9/46456 -> 151.101.94.110/443 (syn+ack) ]-
+|
+| server   = 151.101.94.110/443
+| os       = ???
+| dist     = 13
+| params   = none
+| raw_sig  = 4:51+13:0:1410:mss*20,9:mss,sok,ts,nop,ws:id-:0
+|
+`----
+
+.-[ 172.20.10.9/46456 -> 151.101.94.110/443 (mtu) ]-
+|
+| server   = 151.101.94.110/443
+| link     = generic tunnel or VPN
+| raw_mtu  = 1450
+|
+`----
+
+.-[ 172.20.10.9/46456 -> 151.101.94.110/443 (uptime) ]-
+|
+| client   = 172.20.10.9/46456
+| uptime   = 41 days 13 hrs 47 min (modulo 49 days)
+| raw_freq = 1000.00 Hz
+|
+`----
+
+.-[ 172.20.10.9/43992 -> 151.101.92.176/443 (syn) ]-
+|
+| client   = 172.20.10.9/43992
+| os       = Linux 3.11 and newer
+| dist     = 0
+| params   = none
+| raw_sig  = 4:64+0:0:1460:mss*20,7:mss,sok,ts,nop,ws:df,id+:0
+|
+`----
+
+.-[ 172.20.10.9/43992 -> 151.101.92.176/443 (host change) ]-
+|
+| client   = 172.20.10.9/43992
+| reason   = tstamp port
+| raw_hits = 0,1,1,1
+|
+`----
+
+.-[ 172.20.10.9/43992 -> 151.101.92.176/443 (mtu) ]-
+|
+| client   = 172.20.10.9/43992
+| link     = Ethernet or modem
+| raw_mtu  = 1500
+|
+`----
+
+.-[ 2804:18:1839:13a7:3022:8a65:f066:6212/45252 -> 2606:4700:0:0:0:0:6810:424b/443 (syn) ]-
+|
+| client   = 2804:18:1839:13a7:3022:8a65:f066:6212/45252
+| os       = ???
+| dist     = 0
+| params   = none
+| raw_sig  = 6:64+0:0:1390:mss*20,7:mss,sok,ts,nop,ws:flow:0
+|
+`----
+
+.-[ 2804:18:1839:13a7:3022:8a65:f066:6212/45252 -> 2606:4700:0:0:0:0:6810:424b/443 (mtu) ]-
+|
+| client   = 2804:18:1839:13a7:3022:8a65:f066:6212/45252
+| link     = generic tunnel or VPN
+| raw_mtu  = 1450
+|
+`----
+
+.-[ 172.20.10.9/60116 -> 162.247.242.21/443 (syn) ]-
+|
+| client   = 172.20.10.9/60116
+| os       = Linux 3.11 and newer
+| dist     = 0
+| params   = none
+| raw_sig  = 4:64+0:0:1460:mss*20,7:mss,sok,ts,nop,ws:df,id+:0
+|
+`----
+
+.-[ 172.20.10.9/60116 -> 162.247.242.21/443 (mtu) ]-
+|
+| client   = 172.20.10.9/60116
+| link     = Ethernet or modem
+| raw_mtu  = 1500
+|
+`----
+
+.-[ 2804:18:1839:13a7:3022:8a65:f066:6212/38648 -> 2800:3f0:4001:80f:0:0:0:200e/443 (syn) ]-
+|
+| client   = 2804:18:1839:13a7:3022:8a65:f066:6212/38648
+| os       = ???
+| dist     = 0
+| params   = none
+| raw_sig  = 6:64+0:0:1390:mss*20,7:mss,sok,ts,nop,ws:flow:0
+|
+`----
+
+.-[ 2804:18:1839:13a7:3022:8a65:f066:6212/38648 -> 2800:3f0:4001:80f:0:0:0:200e/443 (host change) ]-
+|
+| client   = 2804:18:1839:13a7:3022:8a65:f066:6212/38648
+| reason   = tstamp port
+| raw_hits = 0,1,1,1
+|
+`----
+
+.-[ 2804:18:1839:13a7:3022:8a65:f066:6212/38648 -> 2800:3f0:4001:80f:0:0:0:200e/443 (mtu) ]-
+|
+| client   = 2804:18:1839:13a7:3022:8a65:f066:6212/38648
+| link     = generic tunnel or VPN
+| raw_mtu  = 1450
+|
+`----
+
+.-[ 172.20.10.9/43992 -> 151.101.92.176/443 (syn+ack) ]-
+|
+| server   = 151.101.92.176/443
+| os       = ???
+| dist     = 13
+| params   = none
+| raw_sig  = 4:51+13:0:1410:mss*20,9:mss,sok,ts,nop,ws:id-:0
+|
+`----
+
+.-[ 172.20.10.9/43992 -> 151.101.92.176/443 (mtu) ]-
+|
+| server   = 151.101.92.176/443
+| link     = generic tunnel or VPN
+| raw_mtu  = 1450
+|
+`----
+
+.-[ 2804:18:1839:13a7:3022:8a65:f066:6212/45252 -> 2606:4700:0:0:0:0:6810:424b/443 (syn+ack) ]-
+|
+| server   = 2606:4700:0:0:0:0:6810:424b/443
+| os       = ???
+| dist     = 11
+| params   = none
+| raw_sig  = 6:53+11:0:1360:mss*20,10:mss,nop,nop,sok,nop,ws:flow:0
+|
+`----
+
+.-[ 2804:18:1839:13a7:3022:8a65:f066:6212/45252 -> 2606:4700:0:0:0:0:6810:424b/443 (mtu) ]-
+|
+| server   = 2606:4700:0:0:0:0:6810:424b/443
+| link     = generic tunnel or VPN
+| raw_mtu  = 1420
+|
+`----
+
+.-[ 2804:18:1839:13a7:3022:8a65:f066:6212/38648 -> 2800:3f0:4001:80f:0:0:0:200e/443 (syn+ack) ]-
+|
+| server   = 2800:3f0:4001:80f:0:0:0:200e/443
+| os       = ???
+| dist     = 9
+| params   = none
+| raw_sig  = 6:55+9:0:1360:mss*20,8:mss,sok,ts,nop,ws:flow:0
+|
+`----
+
+.-[ 2804:18:1839:13a7:3022:8a65:f066:6212/38648 -> 2800:3f0:4001:80f:0:0:0:200e/443 (mtu) ]-
+|
+| server   = 2800:3f0:4001:80f:0:0:0:200e/443
+| link     = generic tunnel or VPN
+| raw_mtu  = 1420
+|
+`----
+
+.-[ 2804:18:1839:13a7:3022:8a65:f066:6212/38648 -> 2800:3f0:4001:80f:0:0:0:200e/443 (uptime) ]-
+|
+| client   = 2804:18:1839:13a7:3022:8a65:f066:6212/38648
+| uptime   = 34 days 14 hrs 40 min (modulo 49 days)
+| raw_freq = 1021.28 Hz
+|
+`----
+
+.-[ 172.20.10.9/60116 -> 162.247.242.21/443 (syn+ack) ]-
+|
+| server   = 162.247.242.21/443
+| os       = ???
+| dist     = 15
+| params   = none
+| raw_sig  = 4:240+15:0:1400:4230,0:mss,nop,nop,ts,sok,eol+1::0
+|
+`----
+
+.-[ 172.20.10.9/60116 -> 162.247.242.21/443 (mtu) ]-
+|
+| server   = 162.247.242.21/443
+| link     = generic tunnel or VPN
+| raw_mtu  = 1440
+|
+`----
+
+.-[ 172.20.10.9/60116 -> 162.247.242.21/443 (uptime) ]-
+|
+| client   = 172.20.10.9/60116
+| uptime   = 39 days 13 hrs 14 min (modulo 49 days)
+| raw_freq = 1000.00 Hz
+|
+`----
+
+.-[ 2804:18:1839:13a7:3022:8a65:f066:6212/55808 -> 2800:3f0:4003:c02:0:0:0:9b/443 (syn) ]-
+|
+| client   = 2804:18:1839:13a7:3022:8a65:f066:6212/55808
+| os       = ???
+| dist     = 0
+| params   = none
+| raw_sig  = 6:64+0:0:1390:mss*20,7:mss,sok,ts,nop,ws:flow:0
+|
+`----
+
+.-[ 2804:18:1839:13a7:3022:8a65:f066:6212/55808 -> 2800:3f0:4003:c02:0:0:0:9b/443 (mtu) ]-
+|
+| client   = 2804:18:1839:13a7:3022:8a65:f066:6212/55808
+| link     = generic tunnel or VPN
+| raw_mtu  = 1450
+|
+`----
+
+.-[ 2804:18:1839:13a7:3022:8a65:f066:6212/55808 -> 2800:3f0:4003:c02:0:0:0:9b/443 (syn+ack) ]-
+|
+| server   = 2800:3f0:4003:c02:0:0:0:9b/443
+| os       = ???
+| dist     = 22
+| params   = none
+| raw_sig  = 6:106+22:0:1360:mss*44,8:mss,sok,ts,nop,ws:flow:0
+|
+`----
+
+.-[ 2804:18:1839:13a7:3022:8a65:f066:6212/55808 -> 2800:3f0:4003:c02:0:0:0:9b/443 (mtu) ]-
+|
+| server   = 2800:3f0:4003:c02:0:0:0:9b/443
+| link     = generic tunnel or VPN
+| raw_mtu  = 1420
+|
+`----
+
+.-[ 2804:18:1839:13a7:3022:8a65:f066:6212/55808 -> 2800:3f0:4003:c02:0:0:0:9b/443 (uptime) ]-
+|
+| client   = 2804:18:1839:13a7:3022:8a65:f066:6212/55808
+| uptime   = 32 days 1 hrs 57 min (modulo 49 days)
+| raw_freq = 1000.00 Hz
+|
+`----
+
+.-[ 172.20.10.9/44842 -> 34.216.103.187/443 (syn) ]-
+|
+| client   = 172.20.10.9/44842
+| os       = Linux 3.11 and newer
+| dist     = 0
+| params   = none
+| raw_sig  = 4:64+0:0:1460:mss*20,7:mss,sok,ts,nop,ws:df,id+:0
+|
+`----
+
+.-[ 172.20.10.9/44842 -> 34.216.103.187/443 (host change) ]-
+|
+| client   = 172.20.10.9/44842
+| reason   = tstamp port
+| raw_hits = 0,2,2,2
+|
+`----
+
+.-[ 172.20.10.9/44842 -> 34.216.103.187/443 (mtu) ]-
+|
+| client   = 172.20.10.9/44842
+| link     = Ethernet or modem
+| raw_mtu  = 1500
+|
+`----
+
+.-[ 172.20.10.9/44844 -> 34.216.103.187/443 (syn) ]-
+|
+| client   = 172.20.10.9/44844
+| os       = Linux 3.11 and newer
+| dist     = 0
+| params   = none
+| raw_sig  = 4:64+0:0:1460:mss*20,7:mss,sok,ts,nop,ws:df,id+:0
+|
+`----
+
+.-[ 172.20.10.9/44844 -> 34.216.103.187/443 (mtu) ]-
+|
+| client   = 172.20.10.9/44844
+| link     = Ethernet or modem
+| raw_mtu  = 1500
+|
+`----
+
+.-[ 172.20.10.9/44844 -> 34.216.103.187/443 (uptime) ]-
+|
+| client   = 172.20.10.9/44844
+| uptime   = 9 days 16 hrs 31 min (modulo 49 days)
+| raw_freq = 1000.00 Hz
+|
+`----
+
+.-[ 172.20.10.9/44842 -> 34.216.103.187/443 (syn+ack) ]-
+|
+| server   = 34.216.103.187/443
+| os       = ???
+| dist     = 27
+| params   = none
+| raw_sig  = 4:228+27:0:1410:26847,8:mss,sok,ts,nop,ws:id-:0
+|
+`----
+
+.-[ 172.20.10.9/44842 -> 34.216.103.187/443 (mtu) ]-
+|
+| server   = 34.216.103.187/443
+| link     = generic tunnel or VPN
+| raw_mtu  = 1450
+|
+`----
+
+.-[ 172.20.10.9/44842 -> 34.216.103.187/443 (uptime) ]-
+|
+| client   = 172.20.10.9/44842
+| uptime   = 9 days 16 hrs 31 min (modulo 49 days)
+| raw_freq = 1000.00 Hz
+|
+`----
+
+.-[ 172.20.10.9/59714 -> 151.101.93.194/443 (syn) ]-
+|
+| client   = 172.20.10.9/59714
+| os       = Linux 3.11 and newer
+| dist     = 0
+| params   = none
+| raw_sig  = 4:64+0:0:1460:mss*20,7:mss,sok,ts,nop,ws:df,id+:0
+|
+`----
+
+.-[ 172.20.10.9/59714 -> 151.101.93.194/443 (mtu) ]-
+|
+| client   = 172.20.10.9/59714
+| link     = Ethernet or modem
+| raw_mtu  = 1500
+|
+`----
+
+.-[ 172.20.10.9/59714 -> 151.101.93.194/443 (syn+ack) ]-
+|
+| server   = 151.101.93.194/443
+| os       = ???
+| dist     = 12
+| params   = none
+| raw_sig  = 4:52+12:0:1410:mss*20,9:mss,sok,ts,nop,ws:id-:0
+|
+`----
+
+.-[ 172.20.10.9/59714 -> 151.101.93.194/443 (mtu) ]-
+|
+| server   = 151.101.93.194/443
+| link     = generic tunnel or VPN
+| raw_mtu  = 1450
+|
+`----
+
+.-[ 172.20.10.9/59714 -> 151.101.93.194/443 (uptime) ]-
+|
+| client   = 172.20.10.9/59714
+| uptime   = 14 days 14 hrs 56 min (modulo 49 days)
+| raw_freq = 1000.00 Hz
+|
+`----
+
+.-[ 172.20.10.9/44844 -> 34.216.103.187/443 (syn+ack) ]-
+|
+| server   = 34.216.103.187/443
+| os       = ???
+| dist     = 25
+| params   = none
+| raw_sig  = 4:230+25:0:1410:26847,8:mss,sok,ts,nop,ws:id-:0
+|
+`----
+
+.-[ 172.20.10.9/44844 -> 34.216.103.187/443 (mtu) ]-
+|
+| server   = 34.216.103.187/443
+| link     = generic tunnel or VPN
+| raw_mtu  = 1450
+|
+`----
+
+.-[ 172.20.10.9/44844 -> 34.216.103.187/443 (uptime) ]-
+|
+| server   = 34.216.103.187/443
+| uptime   = 2 days 1 hrs 48 min (modulo 82 days)
+| raw_freq = 552.04 Hz
+|
+`----
+
+.-[ 172.20.10.9/59716 -> 151.101.93.194/443 (syn) ]-
+|
+| client   = 172.20.10.9/59716
+| os       = Linux 3.11 and newer
+| dist     = 0
+| params   = none
+| raw_sig  = 4:64+0:0:1460:mss*20,7:mss,sok,ts,nop,ws:df,id+:0
+|
+`----
+
+.-[ 172.20.10.9/59716 -> 151.101.93.194/443 (mtu) ]-
+|
+| client   = 172.20.10.9/59716
+| link     = Ethernet or modem
+| raw_mtu  = 1500
+|
+`----
+
+.-[ 172.20.10.9/59716 -> 151.101.93.194/443 (uptime) ]-
+|
+| client   = 172.20.10.9/59716
+| uptime   = 14 days 14 hrs 56 min (modulo 49 days)
+| raw_freq = 1000.00 Hz
+|
+`----
+
+.-[ 172.20.10.9/59716 -> 151.101.93.194/443 (syn+ack) ]-
+|
+| server   = 151.101.93.194/443
+| os       = ???
+| dist     = 14
+| params   = none
+| raw_sig  = 4:50+14:0:1410:mss*20,9:mss,sok,ts,nop,ws:id-:0
+|
+`----
+
+.-[ 172.20.10.9/59716 -> 151.101.93.194/443 (mtu) ]-
+|
+| server   = 151.101.93.194/443
+| link     = generic tunnel or VPN
+| raw_mtu  = 1450
+|
+`----
+
+
+All done. Processed 550 packets.
