@@ -1,4 +1,4 @@
-	Esta lista representa as 'Top Ten' ameaças lançadas pelo OWASP e reconhecidas por grandes organizações. O propósito dessa lista não é ajudar ou dar ideias aos atacantes e à pessoas mal-intencionadas, mas sim aos mantenedores de softwares que desejam se proteger de ameaças novas, porém já vastamente exploradas.
+	Esta lista representa uma das 'Top Ten' ameaças lançadas pelo OWASP e reconhecidas por grandes organizações. O propósito dessa lista não é ajudar ou dar ideias aos atacantes e à pessoas mal-intencionadas, mas sim aos mantenedores de softwares que desejam se proteger de ameaças novas, porém já vastamente exploradas.
 	Neste experimentos utilizaremos a lista abaixo como ponto de partida para explorarmos cada item, descobrindo se há a vulnerabilidade ou não. As principais ferramentas que serão utilizadas serão o WPScan e o OWASP ZAP.
 
 	A1 Injection 
@@ -34,15 +34,6 @@
 
 
 	Utilizaremos uma ferramenta de 'conteneirezação' extremamente comum atualmente, o Docker, para configurar nosso ambiente de testes.
-
-
-
-
-
-
------------------------------------------------------------------------------------------------
-----------------------------	Explorando o Wordpress	---------------------------------------
------------------------------------------------------------------------------------------------
 
 
 -----------------------------------------------------------------------------------------------
